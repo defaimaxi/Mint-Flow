@@ -1,0 +1,19 @@
+[package]
+name = "solana-nft-minter"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+no-entrypoint = []
+no-idl = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.28.0"
+anchor-spl = "0.28.0"
+solana-program = "1.16"
+mpl-token-metadata = { version = "1.13", features = ["no-entrypoint"] }
